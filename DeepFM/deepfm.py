@@ -46,6 +46,7 @@ class KerasDeepFM(object):
             y_first_order = Concatenate(axis=1)([dense_numeric, con_cate])         #None*len*1
         else:
             y_first_order = con_cate
+            
         y_first_order = MySumLayer(axis=1)(y_first_order)                #None*1
 
         #second order
